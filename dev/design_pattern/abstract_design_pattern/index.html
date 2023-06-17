@@ -18,10 +18,10 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href='/samtech/favicon.ico' type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Design Pattern 01. Factory Pattern - SamTech</title>
+    <title>Design Pattern 02. Abstract Factory Pattern - SamTech</title>
 
     
-    <meta name="description" content="understanding the Factory Pattern" />
+    <meta name="description" content="understanding the Abstract Factory Pattern" />
     
 
     
@@ -31,19 +31,19 @@
     
 
     
-        <meta property="og:title" content="Design Pattern 01. Factory Pattern" />
-<meta property="og:description" content="understanding the Factory Pattern" />
+        <meta property="og:title" content="Design Pattern 02. Abstract Factory Pattern" />
+<meta property="og:description" content="understanding the Abstract Factory Pattern" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://soulsy.github.io/samtech/dev/design_pattern/faactory_pattern/" /><meta property="article:section" content="dev" />
-<meta property="article:published_time" content="2023-06-15T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-06-15T00:00:00+00:00" />
+<meta property="og:url" content="https://soulsy.github.io/samtech/dev/design_pattern/abstract_design_pattern/" /><meta property="article:section" content="dev" />
+<meta property="article:published_time" content="2023-06-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-06-16T00:00:00+00:00" />
 
     
 
     
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Design Pattern 01. Factory Pattern"/>
-<meta name="twitter:description" content="understanding the Factory Pattern"/>
+<meta name="twitter:title" content="Design Pattern 02. Abstract Factory Pattern"/>
+<meta name="twitter:description" content="understanding the Abstract Factory Pattern"/>
 
     <link rel="stylesheet" href="/samtech/style.min.5297c96c59a52afaa5bcda4a6cedf3813081f64025c209b25b2ee6d0c8f74d462b625ad3404a92a14d7a51b4ec0a420337ae70f426fa4bce2d5f7459a3ca7274.css" integrity="sha512-UpfJbFmlKvqlvNpKbO3zgTCB9kAlwgmyWy7m0Mj3TUYrYlrTQEqSoU16UbTsCkIDN65w9Cb6S84tX3RZo8pydA==">
 
@@ -195,15 +195,11 @@
         
             <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#overview-of-the-factory-pattern">Overview of the Factory Pattern</a></li>
-        <li><a href="#example-code">Example Code</a></li>
-        <li><a href="#advantages-of-the-factory-pattern">Advantages of the Factory Pattern</a></li>
-        <li><a href="#common-pitfalls-of-using-the-factory-pattern">Common Pitfalls of Using the Factory Pattern</a></li>
-        <li><a href="#related-patterns-to-use-with-the-factory-pattern">Related Patterns to Use with the Factory Pattern</a></li>
-      </ul>
-    </li>
+    <li><a href="#overview-of-the-abstract-factory-pattern">Overview of the Abstract Factory Pattern</a></li>
+    <li><a href="#example-code">Example Code</a></li>
+    <li><a href="#advantages-of-the-abstract-factory-pattern">Advantages of the Abstract Factory Pattern</a></li>
+    <li><a href="#comparison-between-factory-pattern-and-abstract-factory-pattern">Comparison between Factory Pattern and Abstract Factory Pattern</a></li>
+    <li><a href="#patterns-that-complement-the-abstract-factory-pattern">Patterns that complement the Abstract Factory Pattern</a></li>
   </ul>
 </nav>
         
@@ -219,76 +215,125 @@
         
         
     
-    <p>The Factory pattern is a design pattern that encapsulates object creation, providing flexibility and extensibility. This pattern allows clients to create and retrieve objects through factory methods instead of directly instantiating them.</p>
-<h3 id="overview-of-the-factory-pattern">Overview of the Factory Pattern</h3>
-<p>The Factory pattern involves using factory methods to create and return objects, relieving clients from the responsibility of direct object creation. By utilizing factory methods, clients can easily create objects without being aware of the complex object creation logic.</p>
-<h3 id="example-code">Example Code</h3>
-<pre  class="mc-prism hide language-text" ><code class="language-java">// Animal interface
-public interface Animal {
-    void makeSound();
+    <p>The Abstract Factory pattern is a design pattern that provides an interface for creating related objects, separating the responsibility of object creation. This pattern is useful when multiple objects that are related to each other need to be created, and it allows creating objects without depending on specific classes.</p>
+<h2 id="overview-of-the-abstract-factory-pattern">Overview of the Abstract Factory Pattern</h2>
+<p>The Abstract Factory pattern allows clients to create objects through an abstract factory interface instead of directly creating them. The abstract factory provides an interface for a set of related objects, and concrete factory classes implement this interface to create actual objects. This allows clients to create objects without directly depending on concrete classes.</p>
+<h2 id="example-code">Example Code</h2>
+<pre  class="mc-prism hide language-text" ><code class="language-java">// Abstract Product A
+public interface AbstractProductA {
+    void performAction();
 }
 
-// Cat class
-public class Cat implements Animal {
+// Abstract Product B
+public interface AbstractProductB {
+    void performAction();
+}
+
+// Concrete Product A1
+public class ConcreteProductA1 implements AbstractProductA {
     @Override
-    public void makeSound() {
-        System.out.println(&quot;Meow&quot;);
+    public void performAction() {
+        System.out.println(&quot;Performing action in ConcreteProductA1&quot;);
     }
 }
 
-// Dog class
-public class Dog implements Animal {
+// Concrete Product A2
+public class ConcreteProductA2 implements AbstractProductA {
     @Override
-    public void makeSound() {
-        System.out.println(&quot;Woof&quot;);
+    public void performAction() {
+        System.out.println(&quot;Performing action in ConcreteProductA2&quot;);
     }
 }
 
-// Bird class
-public class Bird implements Animal {
+// Concrete Product B1
+public class ConcreteProductB1 implements AbstractProductB {
     @Override
-    public void makeSound() {
-        System.out.println(&quot;Tweet&quot;);
+    public void performAction() {
+        System.out.println(&quot;Performing action in ConcreteProductB1&quot;);
     }
 }
 
-// AnimalFactory class for creating animals
-public class AnimalFactory {
-    public static Animal createAnimal(String type) {
-        if (type.equalsIgnoreCase(&quot;Cat&quot;)) {
-            return new Cat();
-        } else if (type.equalsIgnoreCase(&quot;Dog&quot;)) {
-            return new Dog();
-        } else if (type.equalsIgnoreCase(&quot;Bird&quot;)) {
-            return new Bird();
-        }
-        return null;
+// Concrete Product B2
+public class ConcreteProductB2 implements AbstractProductB {
+    @Override
+    public void performAction() {
+        System.out.println(&quot;Performing action in ConcreteProductB2&quot;);
+    }
+}
+
+// Abstract Factory interface
+public interface AbstractFactory {
+    AbstractProductA createProductA();
+    AbstractProductB createProductB();
+}
+
+// Concrete Factory A
+public class ConcreteFactoryA implements AbstractFactory {
+    @Override
+    public AbstractProductA createProductA() {
+        return new ConcreteProductA1();
+    }
+
+    @Override
+    public AbstractProductB createProductB() {
+        return new ConcreteProductB1();
+    }
+}
+
+// Concrete Factory B
+public class ConcreteFactoryB implements AbstractFactory {
+    @Override
+    public AbstractProductA createProductA() {
+        return new ConcreteProductA2();
+    }
+
+    @Override
+    public AbstractProductB createProductB() {
+        return new ConcreteProductB2();
     }
 }
 
 // Client code
 public class Client {
+    private AbstractProductA productA;
+    private AbstractProductB productB;
+
+    public Client(AbstractFactory factory) {
+        productA = factory.createProductA();
+        productB = factory.createProductB();
+    }
+
+    public void performActions() {
+        productA.performAction();
+        productB.performAction();
+    }
+
     public static void main(String[] args) {
-        Animal cat = AnimalFactory.createAnimal(&quot;Cat&quot;);
-        cat.makeSound(); // Output: &quot;Meow&quot;
+        AbstractFactory factoryA = new ConcreteFactoryA();
+        Client clientA = new Client(factoryA);
+        clientA.performActions();
+        // Output:
+        // Performing action in ConcreteProductA1
+        // Performing action in ConcreteProductB1
 
-        Animal dog = AnimalFactory.createAnimal(&quot;Dog&quot;);
-        dog.makeSound(); // Output: &quot;Woof&quot;
-
-        Animal bird = AnimalFactory.createAnimal(&quot;Bird&quot;);
-        bird.makeSound(); // Output: &quot;Tweet&quot;
+        AbstractFactory factoryB = new ConcreteFactoryB();
+        Client clientB = new Client(factoryB);
+        clientB.performActions();
+        // Output:
+        // Performing action in ConcreteProductA2
+        // Performing action in ConcreteProductB2
     }
 }
 </code></pre>
-<h3 id="advantages-of-the-factory-pattern">Advantages of the Factory Pattern</h3>
+<h2 id="advantages-of-the-abstract-factory-pattern">Advantages of the Abstract Factory Pattern</h2>
 <ul>
-<li>Encapsulating object creation logic improves code readability and maintainability.</li>
-<li>The Factory class can be easily extended or modified to add new objects, promoting scalability.</li>
-<li>Clients delegate the responsibility of object creation to factory methods, reducing dependencies.</li>
+<li>Provides a consistent interface for creating related objects, separating the responsibility of object creation.</li>
+<li>Clients can create objects without directly depending on concrete classes.</li>
+<li>Maintains consistency and compatibility among objects.</li>
+<li>Allows creating different object configurations by adding new concrete factory</li>
 </ul>
-<h3 id="common-pitfalls-of-using-the-factory-pattern">Common Pitfalls of Using the Factory Pattern</h3>
-<p>Using the Factory pattern improperly can lead to complex and less maintainable code. Excessive use of factory methods or complex conditional statements can decrease code readability and maintainability. Therefore, it is important to use the Factory pattern in appropriate situations and contexts.</p>
-<p>Here is an example of code that demonstrates how excessive use of factory methods can reduce readability and maintainability:</p>
+<h2 id="comparison-between-factory-pattern-and-abstract-factory-pattern">Comparison between Factory Pattern and Abstract Factory Pattern</h2>
+<p>As mentioned in the previous article about the Factory pattern, excessive use of the Factory pattern can lead to decreased code readability due to unnecessary branching. The following example demonstrates a case where the excessive use of the Factory pattern affects code readability:</p>
 <pre  class="mc-prism hide language-text" ><code class="language-java">// Animal interface
 public interface Animal {
     void makeSound();
@@ -314,11 +359,11 @@ public class Dog implements Animal {
 public class Bird implements Animal {
     @Override
     public void makeSound() {
-        System.out.println(&quot;Tweet&quot;);
+        System.out.println(&quot;Chirp&quot;);
     }
 }
 
-// AnimalFactory class for creating animals
+// AnimalFactory class for creating Animal objects
 public class AnimalFactory {
     public static Animal createAnimal(String type) {
         if (type.equalsIgnoreCase(&quot;Cat&quot;)) {
@@ -341,16 +386,14 @@ public class Rabbit implements Animal {
     @Override
     public void makeSound() {
         System.out.println(&quot;Hop hop&quot;);
-   
-
- }
+    }
 }
 
 // Snake class
 public class Snake implements Animal {
     @Override
     public void makeSound() {
-        System.out.println(&quot;Ssssss&quot;);
+        System.out.println(&quot;Hiss&quot;);
     }
 }
 
@@ -364,20 +407,98 @@ public class Client {
         dog.makeSound(); // Output: &quot;Woof&quot;
 
         Animal bird = AnimalFactory.createAnimal(&quot;Bird&quot;);
-        bird.makeSound(); // Output: &quot;Tweet&quot;
+        bird.makeSound(); // Output: &quot;Chirp&quot;
 
         Animal rabbit = AnimalFactory.createAnimal(&quot;Rabbit&quot;);
         rabbit.makeSound(); // Output: &quot;Hop hop&quot;
 
         Animal snake = AnimalFactory.createAnimal(&quot;Snake&quot;);
-        snake.makeSound(); // Output: &quot;Ssssss&quot;
+        snake.makeSound(); // Output: &quot;Hiss&quot;
     }
 }
 </code></pre>
-<p>In the above example, even though the Factory pattern is used for object creation, the readability is reduced due to excessive use of factory methods. Whenever a new animal is added, the AnimalFactory class&rsquo;s factory method must be modified, which can be cumbersome. In such cases, considering the Abstract Factory pattern, which reduces the usage of factory methods, can be beneficial.</p>
-<h3 id="related-patterns-to-use-with-the-factory-pattern">Related Patterns to Use with the Factory Pattern</h3>
-<p>An often-used pattern in conjunction with the Factory pattern is the Abstract Factory pattern. The Abstract Factory pattern provides an interface for creating families of related objects, further separating object creation responsibilities.</p>
-<p>Another pattern commonly used with the Factory pattern is the Singleton pattern. The Singleton pattern ensures a single instance and can be utilized within the factory class for creating a single instance of the factory.</p>
+<p>By using the Abstract Factory pattern, we can refactor the code as follows:</p>
+<pre  class="mc-prism hide language-text" ><code class="language-java">// Animal interface
+public interface Animal {
+    void makeSound();
+}
+
+// Cat class
+public class Cat implements Animal {
+    @Override
+    public void makeSound() {
+        System.out.println(&quot;Meow&quot;);
+    }
+}
+
+// Dog class
+public class Dog implements Animal {
+    @Override
+    public void makeSound() {
+        System.out.println(&quot;Woof&quot;);
+    }
+}
+
+// Bird class
+public class Bird implements Animal {
+    @Override
+    public void makeSound() {
+        System.out.println(&quot;Chirp&quot;);
+    }
+}
+
+// Abstract Animal Factory
+public interface AnimalFactory {
+    Animal createAnimal();
+}
+
+// Cat Factory
+public class CatFactory implements AnimalFactory {
+    @Override
+    public Animal createAnimal() {
+        return new Cat();
+    }
+}
+
+// Dog Factory
+public class DogFactory implements AnimalFactory {
+    @Override
+    public Animal createAnimal() {
+        return new Dog();
+    }
+}
+
+// Bird Factory
+public class BirdFactory implements AnimalFactory {
+    @Override
+    public Animal createAnimal() {
+        return new Bird();
+    }
+}
+
+// Client code
+public class Client {
+    public static void main(String[] args) {
+        AnimalFactory catFactory = new CatFactory();
+        Animal
+
+ cat = catFactory.createAnimal();
+        cat.makeSound(); // Output: &quot;Meow&quot;
+
+        AnimalFactory dogFactory = new DogFactory();
+        Animal dog = dogFactory.createAnimal();
+        dog.makeSound(); // Output: &quot;Woof&quot;
+
+        AnimalFactory birdFactory = new BirdFactory();
+        Animal bird = birdFactory.createAnimal();
+        bird.makeSound(); // Output: &quot;Chirp&quot;
+    }
+}
+</code></pre>
+<p>Of course, excessive use of the Abstract Factory pattern can lead to similar issues as the Factory pattern, so it&rsquo;s important to use it appropriately based on the given situation and the desired direction of resolution.</p>
+<h2 id="patterns-that-complement-the-abstract-factory-pattern">Patterns that complement the Abstract Factory Pattern</h2>
+<p>One pattern that complements the Abstract Factory pattern is the Singleton pattern. By using the Singleton pattern to ensure that the Factory class has a single instance, consistent object creation can be guaranteed.</p>
+<p>That concludes the article on the Abstract Factory pattern. It also mentions scenarios where it can be used in conjunction with other patterns or situations where it might be misused. I hope this helps!</p>
 
 </article>
 </div>
