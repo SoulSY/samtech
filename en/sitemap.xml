@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://soulsy.github.io/samtech/</loc>
-    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-19T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://soulsy.github.io/samtech/dev/</loc>
-    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-19T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -29,7 +29,7 @@
                 />
   </url><url>
     <loc>https://soulsy.github.io/samtech/tags/creator-pattern/</loc>
-    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-19T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -42,7 +42,7 @@
                 />
   </url><url>
     <loc>https://soulsy.github.io/samtech/tags/design-pattern/</loc>
-    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-19T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -52,6 +52,45 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://soulsy.github.io/samtech/tags/design-pattern/"
+                />
+  </url><url>
+    <loc>https://soulsy.github.io/samtech/dev/design_pattern/builder_pattern/</loc>
+    <lastmod>2023-06-19T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://soulsy.github.io/samtech/ko/dev/design_pattern/builder_pattern/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://soulsy.github.io/samtech/dev/design_pattern/builder_pattern/"
+                />
+  </url><url>
+    <loc>https://soulsy.github.io/samtech/tags/java/</loc>
+    <lastmod>2023-06-19T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://soulsy.github.io/samtech/ko/tags/java/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://soulsy.github.io/samtech/tags/java/"
+                />
+  </url><url>
+    <loc>https://soulsy.github.io/samtech/tags/</loc>
+    <lastmod>2023-06-19T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://soulsy.github.io/samtech/ko/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://soulsy.github.io/samtech/tags/"
                 />
   </url><url>
     <loc>https://soulsy.github.io/samtech/dev/design_pattern/singleton_pattern/</loc>
@@ -67,46 +106,30 @@
                 href="https://soulsy.github.io/samtech/dev/design_pattern/singleton_pattern/"
                 />
   </url><url>
-    <loc>https://soulsy.github.io/samtech/tags/java/</loc>
-    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://soulsy.github.io/samtech/ko/tags/java/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://soulsy.github.io/samtech/tags/java/"
-                />
-  </url><url>
-    <loc>https://soulsy.github.io/samtech/tags/</loc>
-    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://soulsy.github.io/samtech/ko/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://soulsy.github.io/samtech/tags/"
-                />
-  </url><url>
-    <loc>https://soulsy.github.io/samtech/dev/design_pattern/abstract_design_pattern/</loc>
+    <loc>https://soulsy.github.io/samtech/dev/design_pattern/abstract_factory_pattern/</loc>
     <lastmod>2023-06-16T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://soulsy.github.io/samtech/ko/dev/design_pattern/abstract_factory_pattern/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://soulsy.github.io/samtech/dev/design_pattern/abstract_factory_pattern/"
+                />
   </url><url>
-    <loc>https://soulsy.github.io/samtech/dev/design_pattern/faactory_pattern/</loc>
+    <loc>https://soulsy.github.io/samtech/dev/design_pattern/factory_pattern/</loc>
     <lastmod>2023-06-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://soulsy.github.io/samtech/ko/dev/design_pattern/faactory_pattern/"
+                href="https://soulsy.github.io/samtech/ko/dev/design_pattern/factory_pattern/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://soulsy.github.io/samtech/dev/design_pattern/faactory_pattern/"
+                href="https://soulsy.github.io/samtech/dev/design_pattern/factory_pattern/"
                 />
   </url><url>
     <loc>https://soulsy.github.io/samtech/about/</loc>
