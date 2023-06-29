@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://soulsy.github.io/samtech/</loc>
-    <lastmod>2023-06-20T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link
@@ -15,6 +15,111 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://soulsy.github.io/samtech/"
+                />
+  </url><url>
+    <loc>https://soulsy.github.io/samtech/news/</loc>
+    <lastmod>2023-06-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://soulsy.github.io/samtech/ko/news/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://soulsy.github.io/samtech/news/"
+                />
+  </url><url>
+    <loc>https://soulsy.github.io/samtech/tags/bbc/</loc>
+    <lastmod>2023-06-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://soulsy.github.io/samtech/ko/tags/bbc/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://soulsy.github.io/samtech/tags/bbc/"
+                />
+  </url><url>
+    <loc>https://soulsy.github.io/samtech/tags/chatgpt/</loc>
+    <lastmod>2023-06-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://soulsy.github.io/samtech/ko/tags/chatgpt/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://soulsy.github.io/samtech/tags/chatgpt/"
+                />
+  </url><url>
+    <loc>https://soulsy.github.io/samtech/tags/london/</loc>
+    <lastmod>2023-06-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://soulsy.github.io/samtech/ko/tags/london/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://soulsy.github.io/samtech/tags/london/"
+                />
+  </url><url>
+    <loc>https://soulsy.github.io/samtech/tags/openai/</loc>
+    <lastmod>2023-06-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://soulsy.github.io/samtech/ko/tags/openai/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://soulsy.github.io/samtech/tags/openai/"
+                />
+  </url><url>
+    <loc>https://soulsy.github.io/samtech/news/001/</loc>
+    <lastmod>2023-06-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://soulsy.github.io/samtech/ko/news/001/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://soulsy.github.io/samtech/news/001/"
+                />
+  </url><url>
+    <loc>https://soulsy.github.io/samtech/tags/</loc>
+    <lastmod>2023-06-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://soulsy.github.io/samtech/ko/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://soulsy.github.io/samtech/tags/"
                 />
   </url><url>
     <loc>https://soulsy.github.io/samtech/dev/</loc>
@@ -90,21 +195,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://soulsy.github.io/samtech/tags/java/"
-                />
-  </url><url>
-    <loc>https://soulsy.github.io/samtech/tags/</loc>
-    <lastmod>2023-06-20T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://soulsy.github.io/samtech/ko/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://soulsy.github.io/samtech/tags/"
                 />
   </url><url>
     <loc>https://soulsy.github.io/samtech/dev/design_pattern/builder_pattern/</loc>
@@ -194,20 +284,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://soulsy.github.io/samtech/knowledge/"
-                />
-  </url><url>
-    <loc>https://soulsy.github.io/samtech/news/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://soulsy.github.io/samtech/ko/news/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://soulsy.github.io/samtech/news/"
                 />
   </url><url>
     <loc>https://soulsy.github.io/samtech/categories/</loc>
