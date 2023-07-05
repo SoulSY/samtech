@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SamTech</title>
-    <link>https://soulsy.github.io/samtech/knowledge/</link>
-    <description>Recent content on SamTech</description>
+    <title>Artificial Intelligence on SamTech</title>
+    <link>https://soulsy.github.io/samtech/tags/artificial-intelligence/</link>
+    <description>Recent content in Artificial Intelligence on SamTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 04 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://soulsy.github.io/samtech/knowledge/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://soulsy.github.io/samtech/tags/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>TensorFlow Overview</title>
       <link>https://soulsy.github.io/samtech/knowledge/tensorflow/overview/</link>
